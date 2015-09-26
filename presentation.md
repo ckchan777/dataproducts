@@ -1,37 +1,50 @@
-presentation
+Developing Data Products - Course Project
 ========================================================
-author: 
-date: 
+Shaun Chan
+270915
 
-First Slide
+Project: BMI - Body Mass Index
 ========================================================
 
-For more details on authoring R presentations click the
-**Help** button on the toolbar.
+This presentation is being created as part of the peer assessment for the coursera developing data products class. The assignment is geared toward ensuring the following concepts were well understood by the students
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- shiny to build data product application
+- R-Presentation or slidify to create data product related presentations
 
-Slide With Code
+The application
+========================================================
+
+To display the understanding of using shiny to build an application, a simple application called Body Mass Index calculator has been developed and deployed at: https://ckchan777.shinyapps.io/dataproducts
+
+The inputs are height and weight and it will output the BMI value and the level of risk of having a heart disease
+
+Calculation
 ========================================================
 
 
 ```r
-summary(cars)
+inputweight<-60
+inputheight<-1.7
+bmivalue<- inputweight/(inputheight*inputheight) ##formula for bmi
+print(bmivalue)
 ```
 
 ```
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
+[1] 20.76125
 ```
 
-Slide With Plot
+```r
+##BMI value bs Risk of heart disease
+## <18.5:                 Risk of nutritional deficiency diseases
+## Between 18.5 and 22.9: Low risk (healthy range) of heart disease
+## Between 22.9 and 27.4: Moderate risk of heart disease
+## >=27.4:                High risk of heart disease
+```
+
+References
 ========================================================
 
-![plot of chunk unnamed-chunk-2](presentation-figure/unnamed-chunk-2-1.png) 
+More data on BMI is available here, https://en.wikipedia.org/wiki/Body_mass_index
+
+The end
+
